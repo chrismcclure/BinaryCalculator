@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="maincss.css">
+    <title>Binary Calculator</title>
+</head>
+
+<body>
+    <div class="container calculator">
+        <h1>Binary Calculator</h1>
+        <p>Input numbers (each number must be less than 1024) and the binary calculator will turn the decimal numbers add and display the decimal result.</p>
+
+        <div class="row">
+            <div class="col-md-6 clo-xs-12 col-md-offset-3">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="number1">Input First Number:</label>
+                        <input type="text" id="number1" class="form-control" name="firstnumber" placeholder="First Number">
+                        <span id="wrong1"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="number2">Input Second Number: </label>
+                        <input type="text" id="number2" class="form-control" name="firstnumber" placeholder="Second Number">
+                        <span id="wrong2"></span>
+                    </div>
+
+                    <input class="btn btn-lrg btn-primary center-block" type="button" id="clicky" value="Click Here To Calculate">
+                </form>
+
+
+            </div>
+        </div>
+        <div>
+            <p>First Number: <span id="first"></span> The top number is: <span id="topBinary"></span></p>
+        </div>
+        <div class="row">
+            <!--top row of lights-->
+            <div class="col-md-1 col-xs-1">
+                <div class="numbers">
+                    <p>1st Row:</p>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle top">
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle top">
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle top">
+                    <span id="topcell2"></span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle top">
+                    <span id="topcell3"></span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle top">
+                    <span id="topcell14"></span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  top">
+                    <span id="topcell5"></span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  top">
+                    <span id="topcell6"></span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  top">
+                    <span id="topcell7"></span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  top">
+                    <span id="topcell8"></span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  top">
+                    <span id="topcell9"></span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  top">
+                    <span id="topcell10"></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p>Second Number: <span id="second"></span> The bottom number is: <span id="bottomBinary"></span></p>
+        </div>
+        <!--This is starting of second row -->
+        <div class="row">
+            <div class="col-md-1 col-xs-1">
+                <div class="numbers">
+                    <p>2nd Row:</p>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  bottom">
+
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  bottom">
+
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle bottom">
+
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  bottom">
+
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  bottom">
+
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  bottom">
+
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  bottom">
+
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  bottom">
+
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  bottom">
+
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  bottom">
+
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle bottom">
+                </div>
+            </div>
+        </div>
+        <div>
+            <p>Total sum of decimal numbers:<span id="final-decimal-total"></span> The sum is: <span id="sum"></span></p>
+        </div>
+        <!--This is starting of sum row -->
+        <div class="row">
+
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  sum">
+                    <span id="middlecell0"></span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  sum">
+                    <span id="middlecell1"></span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  sum">
+                    <span id="middlecell2"></span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  sum">
+                    <span id="middlecell3"></span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  sum">
+                    <span id="middlecell14"></span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  sum">
+                    <span id="middlecell5"></span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  sum">
+                    <span id="middlecell6"></span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  sum">
+                    <span id="middlecell7"></span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  sum">
+                    <span id="middlecell8"></span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  sum">
+                    <span id="middlecell9"></span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  sum">
+                    <span id="middlecell10"></span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1">
+                <div class="circle  sum">
+                    <span id="middlecell11"></span>
+                </div>
+            </div>
+        </div>
+        <div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>More cool shit</p>
+    </footer>
+    <!--Current Google CDN of JQuery.  2.0+   -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="javascript.js">
+    </script>
+</body>
+
+</html>
