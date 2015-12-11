@@ -10,6 +10,7 @@ $('#clicky').click(function(){
     //Check to make sure both input vaules are numbers
     if(isNaN(numberOne) == true  || numberOne > 1024 || numberOne < 0){
         $('#wrong1').text('*Please input a number between 0 and 1024').css('color', 'red');
+        $('.circle').css('background-color','white').text('');
         return;
     }
     else{
@@ -17,6 +18,7 @@ $('#clicky').click(function(){
     }
     if(isNaN(numberTwo) == true || numberTwo > 1024|| numberTwo < 0){
         $('#wrong2').text('*Please input a number between 0 and 1024').css('color', 'red');
+        $('.circle').css('background-color','white').text('');
         return;
     }
     else{
