@@ -12,11 +12,16 @@ $('#clicky').click(function(){
         $('#wrong1').text('*Please input a number between 0 and 1024').css('color', 'red');
         return;
     }
+    else{
+        $('#wrong1').text('');
+    }
     if(isNaN(numberTwo) == true || numberTwo > 1024|| numberTwo < 0){
         $('#wrong2').text('*Please input a number between 0 and 1024').css('color', 'red');
         return;
     }
-
+    else{
+       $('#wrong2').text('');
+    }
 
 
     var totalDecimal = (Number(numberOne) + Number(numberTwo));
@@ -43,6 +48,8 @@ $('#clicky').click(function(){
     lightRow(binaryTwo, "bottom");
     lightRow(finalBinarySum, "sum");
 
+    $('#number1').val("");
+    $('#number2').val("");
 });
 
 //Lights all the correct buttons ups
@@ -51,8 +58,12 @@ function lightRow(binaryArray, classname){
     $('.' + classname).each(function(){
         $(this).text(binaryArray[i]);
         if(binaryArray[i] == 1){
-        $(this).addClass('color');
+        $(this).css('background-color','red');
         }
+        else{
+        $(this).css('background-color','white');
+        }
+
         i++;
     })
 };

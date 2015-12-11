@@ -5,7 +5,27 @@
      }
      h1 {
          font-size: 55px;
+         color: dodgerblue;
+         font-weight: 700;
      }
+
+    form label{
+    font-size: 20px;
+    }
+
+    .topstuff p {
+        color: darkcyan;
+        font-size: 22px;
+    }
+
+    .topstuff {
+	   margin-bottom: 20px;
+}
+    hr{
+        display: block;
+        height: 5px;
+        background-color: dodgerblue;
+    }
      .circle {
          border: 1px solid black;
          border-radius: 50%;
@@ -18,9 +38,7 @@
          align-items: center;
          color: black
      }
-     .color {
-         background-color: red;
-     }
+
      .calculator {
          padding-top: 0;
          border: 1px solid black;
@@ -38,3 +56,12 @@
      .row {
          margin-bottom: 40px;
      }
+
+footer{
+    background-color: black;
+    color: darkcyan;
+    height: 125px;
+    padding-top: 25px;
+    font-size: 20px;
+    margin-bottom: -15px;
+}
