@@ -1,5 +1,5 @@
-var binaryNumbers = [1024, 512,256, 128, 64, 32, 16, 8, 4, 2 ,1];
-var AddingbinaryNumbers = [512, 256, 128, 64, 32, 16, 8, 4, 2 ,1];
+var binaryNumbers = [1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1];
+var AddingbinaryNumbers = [512, 256, 128, 64, 32, 16, 8, 4, 2, 1];
 
 
 $('#clicky').on('click',function(){
@@ -26,6 +26,7 @@ $('#clicky').on('click',function(){
        $('#wrong2').text('');
     }
 
+    alert("Test 2 " + numberOne);
 
     var totalDecimal = (Number(numberOne) + Number(numberTwo));
 
@@ -50,6 +51,8 @@ $('#clicky').on('click',function(){
     lightRow(binaryOne, "top");
     lightRow(binaryTwo, "bottom");
     lightRow(finalBinarySum, "sum");
+
+    alert('test 3' + numberTwo);
 
     $('#number1').val("");
     $('#number2').val("");
