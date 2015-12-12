@@ -2,7 +2,7 @@ var binaryNumbers = [1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1];
 var AddingbinaryNumbers = [512, 256, 128, 64, 32, 16, 8, 4, 2, 1];
 
 
-$('#clicky').on('click',function(){
+$('#clicky').on('click',function(e){
 
     var numberOne = $('#number1').val();
     alert(numberOne);
@@ -56,6 +56,10 @@ $('#clicky').on('click',function(){
 
     $('#number1').val("");
     $('#number2').val("");
+
+    alert('test 4, end of script' + finalBinarySum);
+
+    e.stopPropagation();
 });
 
 //Lights all the correct buttons ups
