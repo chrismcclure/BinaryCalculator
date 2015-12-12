@@ -1,10 +1,10 @@
 var binaryNumbers = [1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1];
 var AddingbinaryNumbers = [512, 256, 128, 64, 32, 16, 8, 4, 2, 1];
-var stop = false;
 
 
-$('#clicky').on('click', function (e) {
-    if(e.handled !== true){
+
+$('#clicky').unbind('click').bind('click', function () {
+    //if(e.handled !== true){
 
     var numberOne = $('#number1').val();
     alert(numberOne);
@@ -49,18 +49,18 @@ $('#clicky').on('click', function (e) {
 
     alert('test 4, end of script' + finalBinarySum);
 
-    e.handled = true;
-    }
+    //e.handled = true;
+   // }
 });
 
 
 function checknumbers(number, id) {
     //Check to make sure both input vaules are numbers
-    stop = false;
+    var stop = true;
     if (isNaN(number) == true || number > 1024 || number < 0) {
         $('#' + id).text('*Please input a number between 0 and 1024').css('color', 'red');
         $('.circle').css('background-color', 'white').text('');
-        stop = true;
+        stop = false;
     } else {
         $('#' + id).text('');
     }
