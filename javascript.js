@@ -2,9 +2,10 @@ var binaryNumbers = [1024, 512,256, 128, 64, 32, 16, 8, 4, 2 ,1];
 var AddingbinaryNumbers = [512, 256, 128, 64, 32, 16, 8, 4, 2 ,1];
 
 
-$('#clicky').click(function(){
+$('#clicky').on('click',function(){
 
     var numberOne = $('#number1').val();
+    alert(numberOne);
     var numberTwo = $('#number2').val();
 
     //Check to make sure both input vaules are numbers
