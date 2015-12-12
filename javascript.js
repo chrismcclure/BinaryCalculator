@@ -8,23 +8,10 @@ $('#clicky').on('click',function(e){
     alert(numberOne);
     var numberTwo = $('#number2').val();
 
-    //Check to make sure both input vaules are numbers
-    if(isNaN(numberOne) == true  || numberOne > 1024 || numberOne < 0){
-        $('#wrong1').text('*Please input a number between 0 and 1024').css('color', 'red');
-        $('.circle').css('background-color','white').text('');
-        return;
-    }
-    else{
-        $('#wrong1').text('');
-    }
-    if(isNaN(numberTwo) == true || numberTwo > 1024|| numberTwo < 0){
-        $('#wrong2').text('*Please input a number between 0 and 1024').css('color', 'red');
-        $('.circle').css('background-color','white').text('');
-        return;
-    }
-    else{
-       $('#wrong2').text('');
-    }
+
+    //Check numbers
+    checknumbers(numberOne, 'wrong1');
+    checknumbers(numberTwo, 'wrong2');
 
     alert("Test 2 " + numberOne);
 
@@ -59,8 +46,22 @@ $('#clicky').on('click',function(e){
 
     alert('test 4, end of script' + finalBinarySum);
 
-    e.preventDefault();
+    alert(e.text);
 });
+
+
+function checknumbers(number, id){
+ //Check to make sure both input vaules are numbers
+    if(isNaN(number) == true  || number > 1024 || number < 0){
+        $('#' + id).text('*Please input a number between 0 and 1024').css('color', 'red');
+        $('.circle').css('background-color','white').text('');
+        return;
+    }
+    else{
+        $('#' + id).text('');
+    }
+};
+
 
 //Lights all the correct buttons ups
 function lightRow(binaryArray, classname){
