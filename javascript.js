@@ -7,7 +7,6 @@ $('#clicky').unbind('click').bind('click', function () {
     //if(e.handled !== true){
 
     var numberOne = $('#number1').val();
-    alert(numberOne);
     var numberTwo = $('#number2').val();
 
 
@@ -15,8 +14,6 @@ $('#clicky').unbind('click').bind('click', function () {
     checknumbers(numberOne, 'wrong1');
     checknumbers(numberTwo, 'wrong2');
 
-
-    alert("Test 2 " + numberOne);
 
     var totalDecimal = (Number(numberOne) + Number(numberTwo));
 
@@ -42,12 +39,9 @@ $('#clicky').unbind('click').bind('click', function () {
     lightRow(binaryTwo, "bottom");
     lightRow(finalBinarySum, "sum");
 
-    alert('test 3' + numberTwo);
 
     $('#number1').val("");
     $('#number2').val("");
-
-    alert('test 4, end of script' + finalBinarySum);
 
     //e.handled = true;
    // }
