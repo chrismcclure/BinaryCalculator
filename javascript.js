@@ -59,7 +59,7 @@ $('#clicky').on('click',function(e){
 
     alert('test 4, end of script' + finalBinarySum);
 
-    e.stopPropagation();
+    e.preventDefault();
 });
 
 //Lights all the correct buttons ups
