@@ -24,12 +24,9 @@
      hr {
          display: block;
          height: 3px;
-         background-color: dodgerblue;
+         background-color: white;
+         width: 99%;
      }
-
-    .test{
-    background-color: yellow;
-    }
      .circle {
          border: 1px solid black;
          border-radius: 50%;
@@ -49,12 +46,6 @@
          background-color: black;
          color: white;
      }
-
-
-     .numbers {
-         word-wrap: break-word;
-         color: white;
-     }
      .pad {
          margin-top: 30px;
      }
@@ -72,42 +63,36 @@
          font-size: 20px;
          margin-bottom: -15px;
      }
-
-
-@media screen and (max-width: 480px){
-
-    .circle {
-	height: 30px;
-
-    }
+     #plussign {
+         font-size: 60px;
+     }
+     @media screen and (max-width: 480px) {
+         .circle {
+             height: 30px;
+         }
          .col-xs-1 {
-	padding: 0;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 800px){
-
-    .col-xs-1 {
-	padding: 2px;
-    }
-
-    .circle {
-	height: 60px;
-
-}
-}
-
-
-    @media (min-width: 801px) and (max-width: 1100px){
-
-    .col-md-1 {
-	padding: 5px;
-    }
-
-    .circle {
-	height: 70px;
-
-}
-    }
-
-
+             padding: 0;
+         }
+         #plussign {
+             font-size: 20px;
+         }
+     }
+     @media (min-width: 481px) and (max-width: 800px) {
+         .col-xs-1 {
+             padding: 2px;
+         }
+         .circle {
+             height: 60px;
+         }
+         #plussign {
+             font-size: 40px;
+         }
+     }
+     @media (min-width: 801px) and (max-width: 1100px) {
+         .col-md-1 {
+             padding: 5px;
+         }
+         .circle {
+             height: 70px;
+         }
+     }
